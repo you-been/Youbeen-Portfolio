@@ -69,25 +69,57 @@ gsap.from(".path3", {
 const tl = gsap.timeline({
   scrollTrigger: {
     scrub: 1,
-    trigger: ".header-item-wrapper",
-    start: "50% 50%",
+    pin: true,
+    trigger: ".button-wrapper",
+    start: "100% bottom",
     endTrigger: ".bottom-img-wrapper",
-    end: "bottom 50%",
-    marker: true,
+    end: "30% 100%",
   },
 });
 
-tl.to(".button", {
-  rotateZ: 500,
+tl.to(".button-wrapper", {
+  rotateZ: 900,
 });
-gsap.to(".button", {
+gsap.to(".button-wrapper", {
   scrollTrigger: {
-    trigger: ".contact-section",
+    trigger: ".bottom-img-wrapper",
     start: "0% bottom", //시작 지점
     end: "0% bottom", //끝 지점
     scrub: 1,
-    toggleClass: "on",
+    /* markers: "true", */
   },
   x: -300,
   scale: 2,
+});
+
+const menu = document.querySelector(".global-menu");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > window.innerHeight) {
+    menu.classList.add("active");
+  } else {
+    menu.classList.remove("active");
+  }
+});
+
+// bgColor change
+document.addEventListener("DOMContentLoaded", function () {
+  const body = document.body;
+  const menuActive = document.querySelector(".global-menu");
+  const triggerDiv = document.querySelector(".contact-ft");
+
+  // 스크롤 이벤트에 대한 핸들러
+  document.addEventListener("scroll", function () {
+    // 트리거 div의 위치 계산
+    const triggerDivBottom = triggerDiv.getBoundingClientRect().top;
+
+    // 스크롤 위치가 트리거 div의 상단에 도달하면 배경색을 변경
+    if (triggerDivBottom <= window.innerHeight) {
+      body.style.backgroundColor = "#eff0c1";
+      menuActive.style.backgroundColor = "#eff0c1b3";
+    } else {
+      body.style.backgroundColor = ""; // 기본 배경색으로 되돌림
+      menuActive.style.backgroundColor = "";
+    }
+  });
 });

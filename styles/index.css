@@ -20,6 +20,7 @@ body {
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     sans-serif;
   color: #6a5542;
+  transition: background-color 2s ease;
 }
 body::-webkit-scrollbar {
   background-color: #fff2d7;
@@ -62,9 +63,22 @@ nav {
   top: 0;
   z-index: 10000;
 }
-nav menu {
+nav .global-menu {
   display: flex;
   justify-content: space-around;
+}
+nav .global-menu.active {
+  background-color: rgba(255, 242, 215, 0.7);
+  height: 52px;
+  transition: background-color 2s ease;
+}
+nav .global-menu.active li a {
+  padding: 15px;
+}
+nav .global-menu.active li img {
+  height: 52px;
+  cursor: pointer;
+  padding: 0 10px;
 }
 nav menu li a {
   display: block;
@@ -205,17 +219,27 @@ nav menu li img {
 /* .contact-section .bottom-item-wrapper {
   position: relative;
 } */
-.header-item-wrapper .button-wrapper .button {
-  position: fixed;
+.header-item-wrapper .button-wrapper {
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 120px;
+  height: 120px;
+  z-index: 1000;
+  overflow: hidden;
 }
-.header-item-wrapper .button-wrapper .button.on {
-  position: sticky;
+.header-item-wrapper .button-wrapper .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
   animation: rotating infinite linear 15s;
   transition-duration: 1s;
 }
+/* .header-item-wrapper .button-wrapper .button.on {
+  animation: rotating infinite linear 15s;
+  transition-duration: 1s;
+} */
 @keyframes rotating {
   100% {
     transform: rotate(360deg);

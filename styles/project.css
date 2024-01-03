@@ -22,6 +22,7 @@ body {
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     sans-serif;
   color: #6a5542;
+  transition: background-color 2s ease;
 }
 body::-webkit-scrollbar {
   background-color: #fff2d7;
@@ -55,21 +56,37 @@ nav menu li a img {
   cursor: pointer;
   padding: 20px 10px;
 }
-
+nav .global-menu.active {
+  background-color: rgba(255, 242, 215, 0.7);
+  height: 52px;
+  transition: background-color 2s ease;
+}
+nav .global-menu.active li a {
+  padding: 15px;
+}
+nav .global-menu.active li:nth-child(3) a {
+  padding: 0px;
+}
+nav .global-menu.active li img {
+  height: 52px;
+  cursor: pointer;
+  padding: 0 10px;
+}
 .subject-section {
-  margin: 200px 12% 0;
+  margin: 200px 15% 0;
   background-color: rgba(106, 85, 66, 0.2);
   border-radius: 30px;
   position: relative;
 }
 .subject-section .subject-title img {
   position: absolute;
+  width: 300px;
   top: -50%;
 }
 .subject-section .subject-title h3 {
   position: absolute;
   top: -17.8px;
-  left: 15%;
+  left: 20%;
   font-family: "Oranienbaum", serif;
   border: 1px solid #6a5542;
   border-radius: 30px;
@@ -91,19 +108,20 @@ nav menu li a img {
   margin: auto 0;
 }
 .subject-section .subject-contents-wrapper .subject-contents h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 .subject-section .subject-contents-wrapper .subject-contents h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 10px 0 80px;
 }
 .subject-section .subject-contents-wrapper .subject-contents p {
   margin: 10px 0;
+  font-size: 1.1rem;
 }
 .overview-section {
-  margin: 0 12%;
+  margin: 0 15%;
   padding: 5% 0;
   display: flex;
   justify-content: space-between;
@@ -132,8 +150,8 @@ section h3 {
 .technology-section,
 .review-section {
   display: flex;
-  margin: 0 12%;
-  padding: 5% 0;
+  margin: 0 15%;
+  padding: 3% 0;
   justify-content: space-between;
   border-bottom: 1px solid #6a5542;
 }
@@ -146,16 +164,17 @@ section h3 {
 }
 .technology-section ul {
   width: 500px;
+  height: 400px;
 }
 .technology-section ul li {
   margin: 20px 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 .guide-section,
 .problem-section {
   display: flex;
-  margin: 0 12%;
-  padding: 5% 0;
+  margin: 0 15%;
+  padding: 3% 0;
   justify-content: space-between;
   border-bottom: 1px solid #6a5542;
 }
@@ -246,6 +265,9 @@ section h3 {
 .problem-section .problem-item .problem-text {
   width: 500px;
 }
+.problem-section .problem-item {
+  margin: 20px;
+}
 .problem-section .problem-item .problem-text p {
   margin: 20px;
 }
@@ -261,7 +283,7 @@ section h3 {
 }
 .review-section .project-container p {
   line-height: 1.5rem;
-  margin: 20px;
+  margin: 20px 0;
 }
 .bottom-btn-container {
   font-size: 1.5rem;
