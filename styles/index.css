@@ -158,8 +158,8 @@ nav menu li img {
 .project-section .project-item-wrapper .projext-item h3 {
   border: 1px solid #6a5542;
   border-radius: 30px;
-  width: 160px;
-  padding: 10px;
+  width: fit-content;
+  padding: 10px 15px;
   font-size: 1.7rem;
   font-family: "Oranienbaum", serif;
   margin: 30px auto;
@@ -186,15 +186,6 @@ nav menu li img {
   top: 30px;
   left: 20px;
 }
-/* .skills-section .skills-item {
-  margin: 0 100px;
-} */
-/* .skills-section .skills-item:nth-child(even) {
-  margin: 80px 25% 80px 0;
-}
-.skills-section .skills-item:nth-child(odd) {
-  margin: 80px 0 80px 25%;
-} */
 .skills-section .skills-item:nth-child(2) {
   margin-top: 0;
 }

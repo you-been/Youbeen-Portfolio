@@ -104,7 +104,13 @@ nav .global-menu.active li img {
   width: 250px;
   box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.27);
 }
+.subject-section .subject-contents-wrapper .horizontal {
+  width: 400px;
+  height: 240px;
+  align-self: center;
+}
 .subject-section .subject-contents-wrapper .subject-contents {
+  width: 25%;
   margin: auto 0;
 }
 .subject-section .subject-contents-wrapper .subject-contents h3 {
@@ -151,7 +157,10 @@ section > h3 {
 }
 .timeline-section,
 .technology-section,
-.review-section {
+.review-section,
+.publishing-section,
+.guide-section,
+.problem-section {
   display: flex;
   margin: 0 15%;
   padding: 3% 0;
@@ -186,14 +195,14 @@ section > h3 {
   margin: 20px 0;
   width: 500px;
 }
-.guide-section,
+/* .guide-section,
 .problem-section {
   display: flex;
   margin: 0 15%;
   padding: 3% 0;
   justify-content: space-between;
   border-bottom: 1px solid #6a5542;
-}
+} */
 
 .guide-section .guide-container {
   display: flex;
@@ -213,28 +222,18 @@ section > h3 {
   line-height: 1.6rem;
   margin: 0 0 20px;
 }
+.guide-section .guide-container .guide-text .typho-list {
+  width: 180px;
+  margin: 20px 0;
+}
 .guide-section .guide-container .guide-text .typho-list p:first-child {
   font-weight: bold;
   border-bottom: 2px solid #6a5542;
 }
-/* .guide-section .guide-container .guide-text .typho-list-wrapper p:nth-child(2) {
-  font-weight: 400;
-}
-.guide-section .guide-container .guide-text .typho-list-wrapper p:nth-child(3) {
-  font-weight: 500;
-}
-.guide-section .guide-container .guide-text .typho-list-wrapper p:nth-child(4) {
-  font-weight: 700;
-}
-.guide-section .guide-container .guide-text .typho-list-wrapper p:last-child {
-  font-weight: 900;
-}
-.guide-section .guide-container .guide-text .typho-list .bold {
-  font-weight: bold;
-} */
 .guide-section .guide-container .guide-text .typho-list-wrapper {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .guide-section .guide-container .guide-text .pretendard p:nth-child(2) {
   font-weight: 400;
@@ -283,6 +282,18 @@ section > h3 {
 .sing-orange {
   background-color: #fbae17;
 }
+.paik-orange {
+  background-color: #ff5c00;
+}
+.paik-green {
+  background-color: #5aff4b;
+}
+.paik-pink {
+  background-color: #ff4aaa;
+}
+.paik-navy {
+  background-color: #192c54;
+}
 .guide-item .guide-text li {
   line-height: 1.6rem;
   margin: 0 0 20px 0;
@@ -292,28 +303,44 @@ section > h3 {
   margin: 0 0 20px;
   font-size: 1.2rem;
 }
+.guide-item .guide-text strong span {
+  padding: 10px 10px;
+  font-size: 1.4rem;
+}
+.guide-item .guide-text li img {
+  margin: 20px 0;
+}
 .problem-section h3,
 .review-section h3 {
   width: 180px;
   height: 80px;
   border-radius: 40px;
 }
-.problem-section .problem-container {
+.problem-section .problem-container,
+.publishing-section .publishing-container {
   display: flex;
   flex-direction: column;
 }
-.problem-section .problem-item {
+.problem-section .problem-item,
+.publishing-section .publishing-item {
   display: flex;
   margin: 20px;
 }
-.problem-section .problem-item .problem-title {
+.problem-section .problem-item .problem-title,
+.publishing-section .publishing-item .publishing-title {
   width: 150px;
 }
-.problem-section .problem-item .problem-text {
+.problem-section .problem-item .problem-text,
+.publishing-section .publishing-item .publishing-text {
   width: 500px;
 }
-.problem-section .problem-item .problem-text p {
+.problem-section .problem-item .problem-text p,
+.publishing-section .publishing-item .publishing-text p {
   margin: 20px 0;
+  line-height: 25px;
+}
+.publishing-section .publishing-item .publishing-text p:first-child {
+  margin-top: 0;
 }
 .problem-section .problem-item .problem-text p:first-child {
   font-weight: bold;
