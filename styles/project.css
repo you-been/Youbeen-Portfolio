@@ -1,38 +1,5 @@
 @charset "utf-8";
 
-@charset "utf-8";
-
-@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
-
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
-
-/* 
-font-family: "Pretendard Variable", Pretendard, -apple-system,
-BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
-"Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji",
-sans-serif; 
-*/
-
-/* font-family: 'Oranienbaum', serif; */
-
-body {
-  background-color: #fff2d7;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    sans-serif;
-  color: #6a5542;
-  transition: background-color 2s ease;
-}
-body::-webkit-scrollbar {
-  background-color: #fff2d7;
-  width: 12px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #6a5542;
-  border-radius: 10px;
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -45,7 +12,7 @@ nav menu {
 nav menu li a {
   display: block;
   padding: 40px 10px;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   font-size: 1.2rem;
 }
 nav menu li:nth-child(3) a {
@@ -86,8 +53,8 @@ nav .global-menu.active li img {
 .subject-section .subject-title h3 {
   position: absolute;
   top: -17.8px;
-  left: 20%;
-  font-family: "Oranienbaum", serif;
+  left: 23%;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   border: 1px solid #6a5542;
   border-radius: 30px;
   width: 120px;
@@ -105,7 +72,7 @@ nav .global-menu.active li img {
   box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.27);
 }
 .subject-section .subject-contents-wrapper .horizontal {
-  width: 400px;
+  width: 430px;
   height: 240px;
   align-self: center;
 }
@@ -140,7 +107,7 @@ section > h3 {
   height: 60px;
   padding: 10px 15px;
   font-size: 1.7rem;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   text-align: center;
 }
 .overview-section .overview-list {
@@ -149,7 +116,7 @@ section > h3 {
 }
 .overview-section .overview-list .overview-text {
   line-height: 1.6rem;
-  width: 500px;
+  width: 550px;
   align-self: flex-end;
 }
 .overview-section .overview-list .overview-text p {
@@ -172,7 +139,7 @@ section > h3 {
   flex-direction: column;
 }
 .timeline-section ol {
-  width: 500px;
+  width: 550px;
 }
 .timeline-section ol li {
   font-size: 1.1;
@@ -193,7 +160,7 @@ section > h3 {
 .technology-list ul li,
 .role-list ul li {
   margin: 20px 0;
-  width: 500px;
+  width: 550px;
 }
 /* .guide-section,
 .problem-section {
@@ -216,7 +183,7 @@ section > h3 {
   width: 150px;
 }
 .guide-section .guide-container .guide-text {
-  width: 500px;
+  width: 550px;
 }
 .guide-section .guide-container .guide-text p {
   line-height: 1.6rem;
@@ -224,7 +191,7 @@ section > h3 {
 }
 .guide-section .guide-container .guide-text .typho-list {
   width: 180px;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 .guide-section .guide-container .guide-text .typho-list p:first-child {
   font-weight: bold;
@@ -249,6 +216,21 @@ section > h3 {
 }
 .guide-section .guide-container .guide-text .soyo p {
   font-weight: 700;
+}
+.guide-section .guide-container .guide-item .media {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.guide-section .guide-container .guide-item .media li {
+  width: 70px;
+}
+.guide-section .guide-container .guide-item .media li:nth-child(2) {
+  width: 130px;
+}
+.guide-section .guide-container .guide-item .media li:nth-child(3) {
+  width: 80px;
 }
 .guide-item .guide-text .color-list {
   display: flex;
@@ -294,6 +276,23 @@ section > h3 {
 .paik-navy {
   background-color: #192c54;
 }
+.port-brown {
+  background-color: #6a5542;
+}
+.port-red {
+  background-color: #871812;
+}
+.port-green {
+  background-color: #6e6949;
+}
+.port-beige {
+  background-color: #fff2d7;
+  border: 1px solid #6a5542;
+}
+.port-lightGreen {
+  background-color: #eff0c1;
+  border: 1px solid #6a5542;
+}
 .guide-item .guide-text li {
   line-height: 1.6rem;
   margin: 0 0 20px 0;
@@ -310,6 +309,24 @@ section > h3 {
 .guide-item .guide-text li img {
   margin: 20px 0;
 }
+.guide-item .guide-img-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.guide-item .guide-img-wrapper-second {
+  display: flex;
+  justify-content: space-between;
+}
+.guide-item .guide-img-wrapper-second img {
+  width: 180px;
+}
+.guide-item .guide-img-wrapper img {
+  width: 120px;
+}
+.guide-item .guide-img-wrapper img:first-child {
+  width: 250px;
+}
+
 .problem-section h3,
 .review-section h3 {
   width: 180px;
@@ -332,7 +349,7 @@ section > h3 {
 }
 .problem-section .problem-item .problem-text,
 .publishing-section .publishing-item .publishing-text {
-  width: 500px;
+  width: 550px;
 }
 .problem-section .problem-item .problem-text p,
 .publishing-section .publishing-item .publishing-text p {
@@ -350,7 +367,7 @@ section > h3 {
   border-bottom: none;
 }
 .review-section .review-container {
-  width: 500px;
+  width: 550px;
   display: flex;
   flex-direction: column;
 }

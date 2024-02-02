@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 트리거 div의 위치 계산
     const triggerDivTop = triggerDiv.getBoundingClientRect().top;
 
-    // 스크롤 위치가 트리거 div의 상단에 도달하면 배경색을 변경
+    // 스크롤 위치가 트리거의 상단에 도달시 배경색 변경
     if (triggerDivTop <= window.innerHeight) {
       body.style.backgroundColor = "#eff0c1";
       menuActive.style.backgroundColor = "#eff0c1b3";

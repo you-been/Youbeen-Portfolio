@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+
+/* 
+font-family: "Pretendard Variable", Pretendard, -apple-system,
+BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+"Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji",
+sans-serif; 
+*/
+
+/* font-family: 'Oranienbaum', Times New Roman, Georgia, arial, serif; */
+
+body {
+  background-color: #fff2d7;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    sans-serif;
+  color: #6a5542;
+  transition: background-color 2s ease;
+}
+body::-webkit-scrollbar {
+  background-color: #fff2d7;
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #6a5542;
+  border-radius: 10px;
+}

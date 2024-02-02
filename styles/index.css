@@ -1,42 +1,14 @@
 @charset "utf-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
-
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
-
-/* 
-font-family: "Pretendard Variable", Pretendard, -apple-system,
-BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
-"Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji",
-sans-serif; 
-*/
-
-/* font-family: 'Oranienbaum', serif; */
-
-body {
-  background-color: #fff2d7;
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    sans-serif;
-  color: #6a5542;
-  transition: background-color 2s ease;
-}
-body::-webkit-scrollbar {
-  background-color: #fff2d7;
-  width: 12px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #6a5542;
-  border-radius: 10px;
-}
 svg {
   width: 700px;
   height: auto;
   display: block;
   margin: auto;
 }
-
+.standard svg {
+  width: 600px;
+}
 .scatter-effect {
   opacity: 0;
   transform: translateY(20px);
@@ -51,13 +23,24 @@ header {
 header .header-item-wrapper {
   width: 600px;
   margin: auto;
+  position: relative;
 }
-header .header-item-wrapper .lllustration {
+header .header-item-wrapper h1::after {
+  content: "";
+  background: url(./images/ribbonWhite.svg) no-repeat 50% / cover;
+  position: absolute;
+  top: 200px;
+  right: -30px;
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+/* header .header-item-wrapper .lllustration {
   width: 90px;
   position: absolute;
-  top: 23vh;
-  right: 33vw;
-}
+  top: 26vh;
+  right: 30vw;
+} */
 nav {
   position: sticky;
   top: 0;
@@ -83,7 +66,7 @@ nav .global-menu.active li img {
 nav menu li a {
   display: block;
   padding: 40px 10px;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   font-size: 1.2rem;
 }
 nav menu li img {
@@ -95,7 +78,7 @@ nav menu li img {
   padding: 12%;
 }
 .main-section h3 {
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   font-size: 5rem;
   text-align: center;
 }
@@ -109,7 +92,7 @@ nav menu li img {
   color: #6e6949;
   border-radius: 30px;
   padding: 10px 15px;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   margin: 0 20px;
 }
 .main-section h4 {
@@ -117,7 +100,7 @@ nav menu li img {
   width: 40%;
   margin: 0 auto;
   text-align: center;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   line-height: 30px;
 }
 .project-section {
@@ -147,9 +130,9 @@ nav menu li img {
 .project-section .project-item-wrapper .projext-item a {
   display: block;
   overflow: hidden;
-  width: 320px;
+  width: 340px;
   height: 400px;
-  transition: 0.3s;
+  transition: 0.5s;
   margin: 0 auto;
 }
 .project-section .project-item-wrapper .projext-item a:hover img {
@@ -161,7 +144,7 @@ nav menu li img {
   width: fit-content;
   padding: 10px 15px;
   font-size: 1.7rem;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   margin: 30px auto;
 }
 .project-section .project-item-wrapper .projext-item p {
@@ -181,7 +164,7 @@ nav menu li img {
 }
 .skills-section .skills-title {
   font-size: 3.5rem;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   position: relative;
   top: 30px;
   left: 20px;
@@ -199,7 +182,7 @@ nav menu li img {
   width: 50%;
   padding: 80px 0 80px 120px;
   font-size: 2rem;
-  font-family: "Oranienbaum", serif;
+  font-family: "Oranienbaum", Times New Roman, Georgia, arial, serif;
   font-weight: 400;
 }
 .skills-section .skills-content li ul {
@@ -230,7 +213,10 @@ nav menu li img {
 /* .contact-section .bottom-item-wrapper {
   position: relative;
 } */
-.header-item-wrapper .button-wrapper {
+.pin-spacer {
+  position: absolute;
+}
+.button-wrapper {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -239,7 +225,7 @@ nav menu li img {
   z-index: 1000;
   overflow: hidden;
 }
-.header-item-wrapper .button-wrapper .button {
+.button-wrapper .button {
   position: absolute;
   bottom: 0;
   right: 0;
